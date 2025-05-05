@@ -53,7 +53,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  background-color: #eeeeee;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 button:focus,
 button:focus-visible {
@@ -168,3 +168,23 @@ circle button color: #2B3948
   color: #7ACAAC;
 }
 
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-button-selected {
+  display: inline-flex;
+  background-color: #CCE7F7;
+  border: none;
+}
+
+.filter-button-unselected {
+
+}
+
+.specific-filters {
+  border-bottom: 1px solid #4f5452;
+
+}

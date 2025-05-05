@@ -4,6 +4,7 @@ import resources from "./assets/resources";
 import categories from "./assets/categories";
 import Card from "./components/Card.vue";
 import FilterButton from "./components/FilterButton.vue";
+import FilterAllButton from "./components/FilterAllButton.vue";
 </script>
 
 <template>
@@ -26,13 +27,17 @@ import FilterButton from "./components/FilterButton.vue";
   </div>
   <p>View and bookmark resources.</p>
 
-  <!-- <FilterAllButton /> -->
+  <div class="filter-buttons">
+    <FilterAllButton />
 
-  <FilterButton
-    v-for="(item, index) in categories"
-    :key="index"
-    :category="item"
-  />
+    <div class="specific-filters">
+      <FilterButton
+        v-for="(item, index) in categories"
+        :key="index"
+        :category="item"
+      />
+    </div>
+  </div>
 
   <Card
     v-for="(item, index) in resources"

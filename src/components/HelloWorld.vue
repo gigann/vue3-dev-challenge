@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import 'material-symbols';
+import { ref } from "vue";
+import "material-symbols";
 
+defineProps<{ msg: string }>();
 
-defineProps<{ msg: string }>()
-
-const count = ref(0)
+const count = ref(0);
 </script>
 
 <template>
@@ -16,12 +15,14 @@ const count = ref(0)
   <span class="material-symbols-outlined">list</span>
   <span class="material-symbols-outlined">sort</span>
 
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
+  <div class="card-container">
+    <div class="card">
+      <button type="button" @click="count++">count is {{ count }}</button>
+      <p>
+        Edit
+        <code>components/HelloWorld.vue</code> to test HMR
+      </p>
+    </div>
   </div>
 
   <p>

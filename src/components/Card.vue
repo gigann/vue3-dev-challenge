@@ -9,17 +9,23 @@ const props = defineProps({
   img: String,
 });
 
-const imageURL = computed(() => `url(${new URL(`../assets/images/${props.img}.jpg`, import.meta.url).href})`);
-
-
-
+const imageURL = computed(
+  () =>
+    `url(${new URL(`../assets/images/${props.img}.jpg`, import.meta.url).href})`
+);
 </script>
 
 <template>
-  <div
-  class="card" :style="{backgroundImage: imageURL }">
-    <div class="category">{{ category }} • Resources</div>
-    <div class="title">{{ title }}</div>
+  <div class="card" :style="{ backgroundImage: imageURL }">
+    <div class="card-buttons">
+      <button class="bookmark-button"><span class="material-symbols-outlined">bookmark</span></button>
+      <button class="menu-button"><span class="material-symbols-outlined">menu</span></button>
+    </div>
+
+    <div class="card-category">
+      <span class="material-symbols-outlined">lightbulb</span>{{ category }} •
+      Resources
+    </div>
+    <div class="card-title">{{ title }}</div>
   </div>
 </template>
-

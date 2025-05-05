@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import 'material-symbols';
+
 
 defineProps<{ msg: string }>()
 
@@ -8,6 +10,11 @@ const count = ref(0)
 
 <template>
   <h1>{{ msg }}</h1>
+
+  <span class="material-symbols-outlined">add</span>
+  <span class="material-symbols-outlined">edit</span>
+  <span class="material-symbols-outlined">list</span>
+  <span class="material-symbols-outlined">sort</span>
 
   <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>

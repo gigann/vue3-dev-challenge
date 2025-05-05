@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import "material-symbols";
 import resources from "./assets/resources";
+import categories from "./assets/categories";
 import Card from "./components/Card.vue";
+import FilterButton from "./components/FilterButton.vue";
 </script>
 
 <template>
@@ -23,6 +25,14 @@ import Card from "./components/Card.vue";
     </div>
   </div>
   <p>View and bookmark resources.</p>
+
+  <!-- <FilterAllButton /> -->
+
+  <FilterButton
+    v-for="(item, index) in categories"
+    :key="index"
+    :category="item"
+  />
 
   <Card
     v-for="(item, index) in resources"

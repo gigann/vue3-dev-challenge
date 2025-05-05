@@ -10,7 +10,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <button v-if="selected" class="filter-button-selected" @click="selected = false">
+  <button v-if="selected" class="filter-button-selected" :id="props.category" @click="selected = false">
     <span class="material-symbols-outlined">check</span>{{ props.category }}
   </button>
   <button v-if="!selected" class="filter-button-unselected" @click="selected = true">

@@ -39,14 +39,16 @@ import FilterAllButton from "./components/FilterAllButton.vue";
     </div>
   </div>
 
-  <Card
-    v-for="(item, index) in resources"
-    :key="index"
-    :title="item.title"
-    :category="item.category"
-    :isBookmarked="item.isBookmarked"
-    :img="item.img"
-  />
+  <div class="card-container">
+    <Card
+      v-for="(item, index) in resources"
+      :key="index"
+      :title="item.title"
+      :category="item.category"
+      :isBookmarked="item.isBookmarked"
+      :img="item.img"
+    />
+  </div>
 </template>
 
 <style scoped>

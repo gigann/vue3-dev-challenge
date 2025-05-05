@@ -1,9 +1,37 @@
 <script setup lang="ts">
+import "material-symbols";
+import resources from "./assets/resources";
+import Card from "./components/Card.vue";
 </script>
 
 <template>
-  <h1>Your Resources</h1>
+  <div class="resource-header">
+    <h1>Your Resources</h1>
+    <div class="header-buttons">
+      <div class="header-button">
+        <span class="material-symbols-outlined">add</span>
+      </div>
+      <div class="header-button">
+        <span class="material-symbols-outlined">edit</span>
+      </div>
+      <div class="header-button">
+        <span class="material-symbols-outlined">list</span>
+      </div>
+      <div class="header-button">
+        <span class="material-symbols-outlined">sort</span>
+      </div>
+    </div>
+  </div>
   <p>View and bookmark resources.</p>
+
+  <Card
+    v-for="(item, index) in resources"
+    :key="index"
+    :title="item.title"
+    :category="item.category"
+    :isBookmarked="item.isBookmarked"
+    :img="item.img"
+  />
 </template>
 
 <style scoped>

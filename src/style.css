@@ -1,15 +1,16 @@
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   /* line-height: 1.5; */
-  font-weight: 400;
+  /* font-weight: 400; */
 
   background-color: #ffffff;
   color: #4f5452;
 
-  font-synthesis: none;
+  /* font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
+  user-select: none;
 }
 
 a {
@@ -75,3 +76,51 @@ green bookmark color: #7ACAAC
 circle button color: #2B3948
 
 */
+
+.resource-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.header-button {
+  margin-left: 28px;
+  cursor: pointer;
+}
+.header-button:hover {
+  transform: scale(1.1);
+}
+.header-button:focus,
+.header-button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.all-button {
+  background-color: #CCE7F7;
+  border-radius: 32px;
+  border: 1px solid transparent;
+
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.card {
+  cursor: pointer;
+  transition: transform 0.25s;
+
+  background-size: cover;
+  background-position: center;
+}
+.card:hover {
+  transform: scale(1.01);
+}

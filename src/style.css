@@ -28,8 +28,9 @@ a:hover {
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   display: flex;
+  align-items: flex-start;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
@@ -74,19 +75,13 @@ button:active {
 }
 
 #app {
-  /* max-width: 1280px; */
+  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  /* text-align: center; */
 }
 
-/*
-green bookmark color: #7ACAAC
-circle button color: #2B3948
-
-*/
-
 .resource-header {
+  max-width: 1140px;
   display: flex;
   justify-content: space-between;
   align-items: center;

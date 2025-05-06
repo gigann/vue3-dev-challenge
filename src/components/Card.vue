@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import "material-symbols";
+import { store } from "../store/store";
+
 
 const props = defineProps({
   title: String,
@@ -16,7 +18,11 @@ const imageURL = computed(
 </script>
 
 <template>
-  <div class="card" :style="{ backgroundImage: imageURL }">
+  <div
+  v-if="store.isFiltered(props.category) || store.filters.length === 0"
+  class="card"
+  :style="{ backgroundImage: imageURL}"
+  >
     <div class="card-buttons">
       <button class="bookmark-button"><span class="material-symbols-outlined">bookmark</span></button>
       <button class="menu-button"><span class="material-symbols-outlined">menu</span></button>

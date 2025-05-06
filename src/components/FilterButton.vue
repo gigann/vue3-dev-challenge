@@ -1,10 +1,7 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
 import "material-symbols";
 import { store } from "../store/store";
 import categories from "../assets/categories";
-
-const selected = ref(false);
 
 const props = defineProps({
   category: String,

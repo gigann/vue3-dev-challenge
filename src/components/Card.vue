@@ -21,14 +21,14 @@ const imageURL = computed(
 
 <template>
   <div
-  v-if="isBookmarked || store.isFiltered(props.category) || store.filters.length === 0"
+  v-if="isBookmarked || (props.category && store.isFiltered(props.category)) || store.filters.length === 0"
   class="card"
   :style="{ backgroundImage: imageURL}"
   >
     <div class="card-buttons">
       <button class="bookmarked-button" v-if="isBookmarked" @click="isBookmarked = !isBookmarked"><span class="material-symbols-outlined" >bookmark</span></button>
       <button class="not-bookmarked-button" v-if="!isBookmarked" @click="isBookmarked = !isBookmarked"><span class="material-symbols-outlined">bookmark</span></button>
-      <button class="menu-button"><span class="material-symbols-outlined">menu</span></button>
+      <button class="menu-button"><span class="material-symbols-outlined">more_vert</span></button>
     </div>
 
     <div class="card-category">

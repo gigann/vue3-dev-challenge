@@ -1,16 +1,26 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import "material-symbols";
+import categories from "../assets/categories";
+import { store } from "../store/store";
 
-const selected = ref(false);
 
 </script>
 
 <template>
-  <button v-if="selected" class="filter-button-selected" @click="selected = false">
+  <button
+  v-if="store.filters.length === 0"
+  class="filter-button-selected"
+  @click=""
+  >
     <span class="material-symbols-outlined">check</span>ALL
   </button>
-  <button v-if="!selected" class="filter-button-unselected" @click="selected = true">
+
+  <button
+  v-if="store.filters.length > 0"
+  class="filter-button-unselected"
+  @click="store.clearFilters()"
+  >
     ALL
   </button>
 
@@ -19,10 +29,8 @@ const selected = ref(false);
 
 <!-- Notes
 
-whenever a filter button is clicked, check if all buttons are clicked
-If they are, click the ALL button.
-
-If the all button is clicked, clear out the other filter buttons
-
+shows as checked if no filters are selected
+if a filter is selected, shows as unchecked (and can be clicked)
+if clicked, clears filters
 
 -->

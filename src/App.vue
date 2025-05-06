@@ -5,6 +5,7 @@ import categories from "./assets/categories";
 import Card from "./components/Card.vue";
 import FilterButton from "./components/FilterButton.vue";
 import FilterAllButton from "./components/FilterAllButton.vue";
+import ShowMoreButton from "./components/ShowMoreButton.vue";
 </script>
 
 <template>
@@ -49,6 +50,8 @@ import FilterAllButton from "./components/FilterAllButton.vue";
       :img="item.img"
     />
   </div>
+
+  <ShowMoreButton/>
 </template>
 
 <style scoped>

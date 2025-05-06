@@ -26,8 +26,8 @@ const imageURL = computed(
   :style="{ backgroundImage: imageURL}"
   >
     <div class="card-buttons">
-      <button class="bookmarked-button" v-if="isBookmarked" @click="isBookmarked = !isBookmarked"><span class="material-symbols-outlined" >bookmark</span></button>
-      <button class="not-bookmarked-button" v-if="!isBookmarked" @click="isBookmarked = !isBookmarked"><span class="material-symbols-outlined">bookmark</span></button>
+      <button class="bookmarked-button" v-if="isBookmarked" @click="isBookmarked = !isBookmarked"><span class="material-symbols-rounded" >bookmark</span></button>
+      <button class="not-bookmarked-button" v-if="!isBookmarked" @click="isBookmarked = !isBookmarked"><span class="material-symbols-rounded">bookmark</span></button>
       <button class="menu-button"><span class="material-symbols-outlined">more_vert</span></button>
     </div>
 

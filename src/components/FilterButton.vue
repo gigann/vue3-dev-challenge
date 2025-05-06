@@ -27,7 +27,7 @@ const onClick = () => {
 
 <template>
   <button
-    v-if="!store.isFiltered(props.category)"
+    v-if="props.category && !store.isFiltered(props.category)"
     class="filter-button-unselected"
     @click="onClick"
   >
@@ -35,7 +35,7 @@ const onClick = () => {
   </button>
 
   <button
-    v-if="store.isFiltered(props.category)"
+    v-if="props.category && store.isFiltered(props.category)"
     class="filter-button-selected"
     :id="props.category"
     @click="onClick"

@@ -1,10 +1,6 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
 import "material-symbols";
-import categories from "../assets/categories";
 import { store } from "../store/store";
-
-
 </script>
 
 <template>

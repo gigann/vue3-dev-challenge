@@ -16,25 +16,44 @@ const imageURL = computed(
   () =>
     `url(${new URL(`../assets/images/${props.img}.jpg`, import.meta.url).href})`
 );
-
 </script>
 
 <template>
   <div
-  v-if="isBookmarked || (props.category && store.isFiltered(props.category)) || store.filters.length === 0"
-  class="card"
-  :style="{ backgroundImage: imageURL}"
+    v-if="
+      isBookmarked ||
+      (props.category && store.isFiltered(props.category)) ||
+      store.filters.length === 0
+    "
+    class="card"
+    :style="{ backgroundImage: imageURL }"
   >
     <div class="card-buttons">
-      <button class="bookmarked-button" v-if="isBookmarked" @click="isBookmarked = !isBookmarked"><span class="material-symbols-rounded" >bookmark</span></button>
-      <button class="not-bookmarked-button" v-if="!isBookmarked" @click="isBookmarked = !isBookmarked"><span class="material-symbols-rounded">bookmark</span></button>
-      <button class="menu-button"><span class="material-symbols-outlined">more_vert</span></button>
+      <button
+        class="bookmarked-button"
+        v-if="isBookmarked"
+        @click="isBookmarked = !isBookmarked"
+      >
+        <span class="material-symbols-rounded">bookmark</span>
+      </button>
+      <button
+        class="not-bookmarked-button"
+        v-if="!isBookmarked"
+        @click="isBookmarked = !isBookmarked"
+      >
+        <span class="material-symbols-rounded">bookmark</span>
+      </button>
+      <button class="menu-button">
+        <span class="material-symbols-outlined">more_vert</span>
+      </button>
     </div>
 
-    <div class="card-category">
-      <span class="material-symbols-outlined">lightbulb</span>{{ category }} •
-      Resources
+    <div class="card-text">
+      <div class="card-category">
+        <span class="material-symbols-outlined">lightbulb</span>{{ category }} •
+        Resources
+      </div>
+      <div class="card-title">{{ title }}</div>
     </div>
-    <div class="card-title">{{ title }}</div>
   </div>
 </template>

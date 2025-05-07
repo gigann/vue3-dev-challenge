@@ -140,12 +140,21 @@ button:active {
   transform: scale(1.05);
 }
 
+.card-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin-left: -16px;
+}
+
 .card-title {
   font-size: medium;
   font-weight: 600;
 }
 .card-category {
   font-size: smaller;
+  margin-bottom: 6px;
 }
 
 .card-buttons {

@@ -8,4 +8,4 @@
 2. Run ```npm i``` to install necessary packages
 
 ## How to Run
-Navigate to vue3-dev-challenge/src, then run ```npm run dev```
+Navigate to ```vue3-dev-challenge/src```, then run ```npm run dev```
